@@ -13,6 +13,8 @@ public:
 protected: 
 	void addChild(Base child);
 	void setParent(Base * parent);
+	std::string getType() const;
+	std::string _type;
 private:
 	Base * _parent;
 	std::map<int, Base> _children;

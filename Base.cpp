@@ -3,12 +3,12 @@
 
 
 Base::Base()
-	: _id(0), _name("NO_NAME"), _children(std::map<int, Base>()), _parent(nullptr)
+	: _id(0), _name("NO_NAME"), _children(std::map<int, Base>()), _parent(nullptr), _type("NO_TYPE")
 {
 }
 
 Base::Base(int id, std::string name)
-	: _id(id), _name(name), _children(std::map<int, Base>()), _parent(nullptr)
+	: _id(id), _name(name), _children(std::map<int, Base>()), _parent(nullptr), _type("NO_TYPE")
 {
 }
 
@@ -19,7 +19,7 @@ int Base::getId() const
 
 void Base::print(int spaces) const
 {
-	std::cout << std::string(spaces, ' ') << "ID: " << this->getId() << " Name: " << this->_name << std::endl;
+	std::cout << std::string(spaces, ' ') << this->_type << " --- ID: " << this->getId() << " Name: " << this->_name << std::endl;
 	spaces += 4;
 	int id = 0;
 	Base child;
@@ -44,4 +44,9 @@ void Base::addChild(Base child)
 void Base::setParent(Base * parent)
 {
 	this->_parent = parent;
+}
+
+std::string Base::getType() const
+{
+	return this->_type;
 }

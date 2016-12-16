@@ -8,6 +8,5 @@ public:
 	Department(int id, std::string name);
 	void addProject(Project company);
 	~Department();
-private:
 };
 
