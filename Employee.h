@@ -4,7 +4,7 @@
 class Employee : public Base
 {
 public:
-	Employee(int id);
+	Employee(int id, std::string name);
 	~Employee();
 private:
 };

@@ -2,7 +2,7 @@
 
 
 
-Employee::Employee(int id) : Base(id)
+Employee::Employee(int id, std::string name) : Base(id, name)
 {
 }
 

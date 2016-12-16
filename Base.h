@@ -6,7 +6,7 @@ class Base
 {
 public:
 	Base();
-	Base(int id);
+	Base(int id, std::string name);
 	int getId() const;
 	void print(std::string indent) const;
 	~Base();
@@ -17,5 +17,6 @@ private:
 	Base * _parent;
 	std::map<int, Base> _children;
 	int _id;
+	std::string _name;
 };
 

@@ -2,7 +2,7 @@
 
 
 
-Company::Company(int id) : Base(id)
+Company::Company(int id, std::string name) : Base(id, name)
 {
 }
 

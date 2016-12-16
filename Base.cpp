@@ -3,12 +3,12 @@
 
 
 Base::Base()
-	: _id(0), _children(std::map<int, Base>()), _parent(nullptr)
+	: _id(0), _name("NO_NAME"), _children(std::map<int, Base>()), _parent(nullptr)
 {
 }
 
-Base::Base(int id)
-	: _id(id), _children(std::map<int, Base>()), _parent(nullptr)
+Base::Base(int id, std::string name)
+	: _id(id), _name(name), _children(std::map<int, Base>()), _parent(nullptr)
 {
 }
 
@@ -19,10 +19,10 @@ int Base::getId() const
 
 void Base::print(std::string indent) const
 {
-	std::cout << indent << "ID: " << this->getId() << std::endl;
+	std::cout << indent << "ID: " << this->getId() << " Name: " << this->_name << std::endl;
 	indent += "    ";
 	int id = 0;
-	Base child = NULL;
+	Base child;
 	for (auto const& pair : this->_children)
 	{
 		id = pair.first;

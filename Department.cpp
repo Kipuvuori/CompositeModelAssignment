@@ -1,6 +1,6 @@
 #include "Department.h"
 
-Department::Department(int id) : Base(id)
+Department::Department(int id, std::string name) : Base(id, name)
 {
 }
 

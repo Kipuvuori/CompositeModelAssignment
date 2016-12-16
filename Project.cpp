@@ -2,7 +2,7 @@
 
 
 
-Project::Project(int id) : Base(id)
+Project::Project(int id, std::string name) : Base(id, name)
 {
 }
 

@@ -5,7 +5,7 @@
 class Company : public Base
 {
 public:
-	Company(int id);
+	Company(int id, std::string name);
 	void addDepartment(Department department);
 	~Company();
 private:
