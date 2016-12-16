@@ -1,5 +1,10 @@
 #include "Company.h"
 
+void pause()
+{
+	std::cin.ignore();
+}
+
 int main()
 {
 	setlocale(LC_ALL, "finnish");
@@ -16,6 +21,6 @@ int main()
 	Company comp = Company(1, "Paras Firma");
 	comp.addDepartment(dep);
 
-	comp.print("");
-	system("pause");
+	comp.print(0);
+	pause();
 }

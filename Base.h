@@ -8,7 +8,7 @@ public:
 	Base();
 	Base(int id, std::string name);
 	int getId() const;
-	void print(std::string indent) const;
+	void print(int spaces) const;
 	~Base();
 protected: 
 	void addChild(Base child);

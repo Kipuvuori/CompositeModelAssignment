@@ -17,17 +17,17 @@ int Base::getId() const
 	return this->_id;
 }
 
-void Base::print(std::string indent) const
+void Base::print(int spaces) const
 {
-	std::cout << indent << "ID: " << this->getId() << " Name: " << this->_name << std::endl;
-	indent += "    ";
+	std::cout << std::string(spaces, ' ') << "ID: " << this->getId() << " Name: " << this->_name << std::endl;
+	spaces += 4;
 	int id = 0;
 	Base child;
 	for (auto const& pair : this->_children)
 	{
 		id = pair.first;
 		child = pair.second;
-		child.print(indent);
+		child.print(spaces);
 	}
 }
 
