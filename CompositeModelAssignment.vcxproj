@@ -125,6 +125,9 @@
     <ClInclude Include="json.hpp" />
     <ClInclude Include="Project.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="data.json" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
