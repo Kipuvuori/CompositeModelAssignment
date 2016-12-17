@@ -5,6 +5,7 @@ class Employee : public Base
 {
 public:
 	Employee(int id, std::string name);
+	Employee(nlohmann::json base);
 	~Employee();
 };
 

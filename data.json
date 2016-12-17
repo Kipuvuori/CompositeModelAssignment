@@ -1,0 +1,29 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "Companyyy",
+      "departments": 
+      [
+        {
+        "id": 1,
+        "name": "Depaarttment",
+        "projects":
+        [
+          {
+            "id": 1,
+            "name": "Projeccsst",
+            "employees":
+            [
+              {
+                "id": 1,
+                "name": "Lolleriloo"
+              }
+            ]
+          }
+          ]
+        }
+        ]
+    }
+  ]
+}
