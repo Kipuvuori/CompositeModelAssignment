@@ -3,7 +3,6 @@
 #include <fstream>
 #include <vector>
 #include <iostream>
-using json = nlohmann::json;
 
 void pause()
 {
@@ -28,15 +27,16 @@ int main(int argc, char* argv[])
 	{
 		std::string filename = argv[1];
 		std::ifstream i(filename);
-		json j;
+		nlohmann::json j;
 		i >> j;
 		if (j["companies"].is_array())
 		{
-			std::vector<json> companies = j["companies"].get<std::vector<json>>();
-			for (json company : companies)
+			std::vector<nlohmann::json> companies = j["companies"].get<std::vector<nlohmann::json>>();
+			for (nlohmann::json company : companies)
 			{
-				Company comp = Company(company);
-				comp.print(0);
+				Company * comp = new Company(company);
+				comp->print(0);
+				delete comp;
 			}
 		}
 	}

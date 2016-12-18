@@ -77,6 +77,13 @@ void Base::print(int spaces) const
 
 Base::~Base()
 {
+	this->_children.clear();
+	this->_parent = nullptr;
+	this->_id = 0;
+	this->_name = "";
+	this->_type = "";
+	this->_childen_json_name = "";
+	this->_info.clear();
 }
 
 void Base::addChild(Base child)
