@@ -1,0 +1,30 @@
+{
+  "companies": [
+    {
+      "id": this will kill chash the program,
+      "name": "it's not nice to give string instead of integer :(",
+      "departments":
+      [
+        {
+        "id": 1,
+        "name": "Depaarttment",
+        "projects -chaning titles or giving uneven ammount of data also breaks":
+        [
+          {
+            "id": 1,
+            "name": "Projeccsst like giving age for only some employees",
+            "employees":
+            [
+              {
+                "id": 1,
+                "name": "Lolleriloo",
+                "age": 1234
+              },
+            ]
+          }
+          ]
+        }
+        ]
+    }
+  ]
+}
