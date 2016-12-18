@@ -11,6 +11,7 @@ public:
 	Base(nlohmann::json base);
 	int getId() const;
 	void print(int spaces) const;
+	std::map<std::string, std::string> Info() const;
 	~Base();
 protected: 
 	void addChild(Base child);
@@ -21,6 +22,7 @@ protected:
 	std::string _type;
 	std::string _childen_json_name;
 	virtual void callAddChild(nlohmann::json child);
+	std::map<std::string, std::string> _info;
 private:
 	Base * _parent;
 	std::map<int, Base> _children;

@@ -2,6 +2,7 @@
 #include "json.hpp"
 #include <fstream>
 #include <vector>
+#include <iostream>
 using json = nlohmann::json;
 
 void pause()

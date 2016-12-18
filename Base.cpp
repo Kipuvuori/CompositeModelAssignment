@@ -3,27 +3,43 @@
 
 
 Base::Base()
-	: _id(0), _name("NO_NAME"), _children(std::map<int, Base>()), _parent(nullptr), _type("NO_TYPE"), _childen_json_name("NO_NAME")
+	: _id(0), _name("NO_NAME"), _children(std::map<int, Base>()), _parent(nullptr), _type("NO_TYPE"), _childen_json_name("NO_NAME"), _info(std::map<std::string, std::string>())
 {
 }
 
 Base::Base(int id, std::string name)
-	: _id(id), _name(name), _children(std::map<int, Base>()), _parent(nullptr), _type("NO_TYPE"), _childen_json_name("NO_NAME")
+	: _id(id), _name(name), _children(std::map<int, Base>()), _parent(nullptr), _type("NO_TYPE"), _childen_json_name("NO_NAME"), _info(std::map<std::string, std::string>())
 {
 }
 
 Base::Base(nlohmann::json base)
 {
-	if (base["name"].is_string())
-	{
-		this->_name = base["name"].get<std::string>();
-	}
-	else this->_name = "NO_NAME";
 	if (base["id"].is_number_integer())
 	{
 		this->_id = base["id"].get<int>();
 	}
-	else this->_id = 0;
+	std::string value;
+	int value_int;
+	std::string key;
+	for (auto it = base.begin(); it != base.end(); ++it)
+	{
+		key = it.key();
+		if (it.value().is_string())
+		{
+			value = it.value().get<std::string>();
+			this->_info[key] = value;
+		}
+		else if (it.value().is_number_integer())
+		{
+			value_int = it.value().get<int>();
+			std::string value = std::to_string(value_int);
+			this->_info[key] = value;
+		}
+	}
+	if (this->_info.count("name") > 0)
+	{
+		this->_name = this->_info["name"];
+	}
 }
 
 
@@ -35,7 +51,19 @@ int Base::getId() const
 
 void Base::print(int spaces) const
 {
-	std::cout << std::string(spaces, ' ') << this->_type << " --- ID: " << this->getId() << " Name: " << this->_name << std::endl;
+	std::string space = std::string(spaces, ' ');
+	std::cout
+		<< space << this->_type << " --- " << this->getId() << std::endl;
+	std::map<std::string, std::string> info = this->Info();
+	std::string key;
+	std::string val;
+	for (auto const& pair : info)
+	{
+		key = pair.first;
+		val = pair.second;
+		std::cout
+			<< space + " " << key << ": " << val << std::endl;
+	}
 	spaces += 4;
 	int id = 0;
 	Base child;
@@ -83,6 +111,11 @@ std::string Base::getType() const
 std::string Base::getChildrenJsonName() const
 {
 	return this->_childen_json_name;
+}
+
+std::map<std::string, std::string> Base::Info() const
+{
+	return this->_info;
 }
 
 void Base::callAddChild(nlohmann::json child)
