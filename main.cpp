@@ -41,8 +41,8 @@ int main(int argc, char* argv[])
 	}
 	else
 	{
-		Project proj = Project(1, "T‰rke‰ Projekti");
-		proj.addEmployee(Employee(1, "Pekka Miettil‰"));
+		Project proj = Project(1, "T√§rke√§ Projekti");
+		proj.addEmployee(Employee(1, "Pekka Miettil√§"));
 
 		Project proj2 = Project(2, "Hieno Projekti");
 		proj2.addEmployee(Employee(2, "Hieno Mies"));

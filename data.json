@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Companyyy",
-      "departments": 
+      "departments":
       [
         {
         "id": 1,
@@ -17,13 +17,233 @@
             [
               {
                 "id": 1,
-                "name": "Lolleriloo"
+                "name": "Lolleriloo",
+                "age": 1234
+              },
+              {
+                "id": 2,
+                "name": "omaa sukua testi nimi",
+                "age": 45
+              },
+              {
+                "id": 3,
+                "name": "toinen testi",
+                "age": 14
+              },
+              {
+                "id": 10,
+                "name": "parajas jäbä",
+                "age": 54
               }
             ]
           }
           ]
         }
         ]
+    },
+    {
+      "id": 2,
+      "name": "Red planet",
+      "departments":
+      [
+        {
+          "id": 1,
+          "name": "Code Black",
+          "projects":
+          [
+            {
+              "id": 1,
+              "name": "Orginal mix",
+              "employees":
+              [
+                {
+                  "id": 1,
+                  "name": "Olen Nimi",
+                  "age": 9393
+                }
+              ]
+            },
+
+            {
+              "id": 2,
+              "name": "rojekti",
+              "employees":
+              [
+                {
+                  "id": 1337,
+                  "name": "H4x0r",
+                  "age": 32
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Oikea Firma Oy Ab",
+      "departments":
+      [
+        {
+          "id": 1,
+          "name": "R&D",
+          "projects":
+          [
+            {
+              "id": 1,
+              "name": "Code name IQON",
+              "employees":
+              [
+                {
+                  "id": 1,
+                  "name": "Ismo Insinööri",
+                  "age": 54
+                },
+                {
+                  "id": 2,
+                  "name": "Seppo Käytettävyys-heppu",
+                  "age": 34
+                },
+                {
+                  "id": 3,
+                  "name": "Ismo Insinööri",
+                  "age": 28
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "name": "Pyörä",
+              "employees":
+              [
+                {
+                  "id": 1,
+                  "name": "Työn Ukko",
+                  "age": 68
+                },
+                {
+                  "id": 2,
+                  "name": "Vilja Monisäijehiutale",
+                  "age": 19
+                },
+                {
+                  "id": 3,
+                  "name": "a higher force",
+                  "age": 99999999999999999999999
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Marketing",
+          "projects":
+          [
+            {
+              "id": 1,
+              "name": "MYY! MYY! MYY!",
+              "employees":
+              [
+                {
+                  "id": 1,
+                  "name": "Myynti Tykki",
+                  "age": 22
+                },
+                {
+                  "id": 2,
+                  "name": "Brennan Heart",
+                  "age": 32
+                },
+                {
+                  "id": 3,
+                  "name": "Ran-D",
+                  "age": 27
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Testing",
+          "projects":
+          [
+            {
+              "id": 1,
+              "name": "Erikoismerkki testi",
+              "employees":
+              [
+                {
+                  "id": 1,
+                  "name": "ÖÄÅ^*!\"#¤%&/()=?`@£$€{[]}~~|µ||š.!▲▼#pÑlªÏes♀§◙♫☼◄↕► n☼☺☻♥♠♣♦•◘○♠♣◙♂♀♪♫☼►◄↕‼¶§▬↨↑↓→←∟↔▲",
+                  "age": 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "tehras",
+          "projects":
+          [
+            {
+              "id": 1,
+              "name": "perus tuontato",
+              "employees":
+              [
+                {
+                  "id": 0,
+                  "name": "Masi Masiina",
+                  "age": 0
+                },
+                {
+                  "id": 1,
+                  "name": "Iso laite",
+                  "age": -123
+                },
+                {
+                  "id": 2,
+                  "name": "Jooh",
+                  "age": 34
+                },
+                {
+                  "id": 3,
+                  "name": "Jee",
+                  "age": 1235545
+                },
+                {
+                  "id": 4,
+                  "name": "Huoltoukko",
+                  "age": 53
+                },
+                {
+                  "id": 5,
+                  "name": "Laitos",
+                  "age": 400
+                },
+                {
+                  "id": 6,
+                  "name": "Ikuinen valitas",
+                  "age": 9999999999999999999999999999999999999999
+                },
+                {
+                  "id": 7,
+                  "name": "Siivoja",
+                  "age": 82
+                },
+                {
+                  "id": 8,
+                  "name": "Joo0o0o0o0o0OOOOOOOO  ಥ⌣ಥ",
+                  "age": 2929
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
