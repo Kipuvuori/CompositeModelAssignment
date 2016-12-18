@@ -60,6 +60,5 @@ int main(int argc, char* argv[])
 		comp.print(0);
 	}
 
-	pause();
 	return 1;
 }
