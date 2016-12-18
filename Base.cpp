@@ -5,11 +5,13 @@
 Base::Base()
 	: _id(0), _name("NO_NAME"), _children(std::map<int, Base>()), _parent(nullptr), _type("NO_TYPE"), _childen_json_name("NO_NAME"), _info(std::map<std::string, std::string>())
 {
+	this->_info["name"] = this->_name;
 }
 
 Base::Base(int id, std::string name)
 	: _id(id), _name(name), _children(std::map<int, Base>()), _parent(nullptr), _type("NO_TYPE"), _childen_json_name("NO_NAME"), _info(std::map<std::string, std::string>())
 {
+	this->_info["name"] = name;
 }
 
 Base::Base(nlohmann::json base)
